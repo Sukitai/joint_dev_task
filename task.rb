@@ -179,9 +179,9 @@ class UserQ18
 
   def introduce
     if @age >= $adult
-      puts "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+      print "こんにちは，#{@name}と申します。宜しくお願いいたします。"
     else
-      puts "はいさいまいど〜，#{@name}です！！！"
+      print "はいさいまいど〜，#{@name}です！！！"
     end
   end
 end
@@ -191,8 +191,8 @@ def q18
   user1 = UserQ18.new(name: "あじー", age: 32)
   user2 = UserQ18.new(name: "ゆたぼん", age: 10)
 
-  print user1.introduce
-  print user2.introduce
+  puts user1.introduce
+  puts user2.introduce
 end
 
 class Item
