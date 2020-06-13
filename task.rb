@@ -170,8 +170,20 @@ def q17
 end
 
 class UserQ18
+  $adult = 20
   # 以下に回答を記載
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+  end
 
+  def introduce
+    if @age >= $adult
+      puts "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+    else
+      puts "はいさいまいど〜，#{@name}です！！！"
+    end
+  end
 end
 
 def q18
