@@ -144,7 +144,7 @@ end
 
 class UserQ17
   # 以下に回答を記載
-  def initialize(personal)
+  def initialize(**personal)
     @name = personal[:name]
     @age = personal[:age]
     @gender = personal[:gender]
