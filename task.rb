@@ -230,16 +230,15 @@ class Zoo
   end
 
   def info_entry_fee(arg)
-    seg = 0
-    case arg.age
+    seg = case arg.age
       when 0..5
-        seg = @fees[:infant]
+        @fees[:infant]
       when 6..12
-        seg = @fees[:children]
+        @fees[:children]
       when 13..64
-        seg = @fees[:adult]
+        @fees[:adult]
       when 65..120
-        seg = @fees[:senior]
+        @fees[:senior]
       end
       
     puts "#{arg.name}さんの入場料金は #{seg} 円です。"
