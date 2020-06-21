@@ -223,8 +223,6 @@ end
 
 class Zoo
   # 以下に回答を記載
-  attr_reader :fees
-
   def initialize(**record)
     @fees = record[:entry_fee]
   end
