@@ -213,11 +213,37 @@ end
 
 class UserQ20
   # 以下に回答を記載
+  attr_reader :name, :age
 
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+  end
 end
 
 class Zoo
   # 以下に回答を記載
+  attr_reader :fees
+
+  def initialize(**record)
+    @fees = record[:entry_fee]
+  end
+
+  def info_entry_fee(arg)
+    seg = 0
+    case arg.age
+      when 0..5
+        seg = @fees[:infant]
+      when 6..12
+        seg = @fees[:children]
+      when 13..64
+        seg = @fees[:adult]
+      when 65..120
+        seg = @fees[:senior]
+      end
+      
+    puts "#{arg.name}さんの入場料金は #{seg} 円です。"
+  end
 
 end
 
